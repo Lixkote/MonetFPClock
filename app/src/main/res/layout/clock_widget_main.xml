@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingStart="28dp">
@@ -33,7 +33,7 @@
             android:format24Hour="@string/big_clock_24_hours_format"
             android:gravity="start"
             android:includeFontPadding="false"
-            android:textColor="@android:color/system_accent1_200" />
+            android:textColor="@android:color/system_accent1_100" />
 
         <TextView
             android:id="@+id/ampm_text"
@@ -121,27 +121,25 @@
         </RelativeLayout>
     </RelativeLayout>
 
-    <TextView
+    <Button
         android:id="@+id/clock_edit_button"
-        style="@style/text_condensed_bold_italic_18sp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/hour_container"
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
-        android:background="@drawable/rounded_corner"
         android:ellipsize="end"
         android:fontFamily="@font/inter_light"
         android:includeFontPadding="false"
-        android:paddingStart="8dp"
-        android:paddingTop="4dp"
-        android:paddingEnd="8dp"
-        android:paddingBottom="4dp"
         android:singleLine="true"
         android:text="@string/edit"
-        android:textColor="@android:color/black"
-        android:textSize="18sp"
-        android:textStyle="bold|italic" />
+        android:textAllCaps="false"
+        android:textColor="@android:color/system_accent1_100"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:backgroundTint="@android:color/system_accent2_800"
+        app:icon="@drawable/baseline_edit_24"
+        app:iconTint="@android:color/system_accent1_100" />
 
     <!-- GUIDELINES -->
     <!--<LinearLayout

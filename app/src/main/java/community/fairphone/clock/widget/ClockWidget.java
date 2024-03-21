@@ -6,6 +6,7 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.widget.Button;
 import android.os.Build;
 import android.provider.AlarmClock;
 import android.provider.Settings;
@@ -33,6 +34,7 @@ public class ClockWidget extends AppWidgetProvider {
         Log.d(TAG, "onEnabled");
         super.onEnabled(context);
     }
+
 
 
     @Override
@@ -67,11 +69,12 @@ public class ClockWidget extends AppWidgetProvider {
     }
 
     private static void setupEditOnClick(Context context, RemoteViews widget) {
-        String intentAction = Build.VERSION.SDK_INT >= 19 ? AlarmClock.ACTION_SHOW_ALARMS : AlarmClock.ACTION_SET_ALARM;
+        String intentAction = AlarmClock.ACTION_SHOW_ALARMS;
         Intent launchIntent = new Intent(intentAction);
         PendingIntent launchPendingIntent = PendingIntent.getActivity(context, r.nextInt(), launchIntent, PendingIntent.FLAG_UPDATE_CURRENT);
         widget.setOnClickPendingIntent(R.id.clock_edit_button, launchPendingIntent);
     }
+
 
     private static void setClockAmPm(Context context, RemoteViews widget) {
         if (DateFormat.is24HourFormat(context)) {
