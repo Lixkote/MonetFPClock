@@ -72,7 +72,7 @@ public class ClockWidget extends AppWidgetProvider {
         String intentAction = AlarmClock.ACTION_SHOW_ALARMS;
         Intent launchIntent = new Intent(intentAction);
         PendingIntent launchPendingIntent = PendingIntent.getActivity(context, r.nextInt(), launchIntent, PendingIntent.FLAG_UPDATE_CURRENT);
-        widget.setOnClickPendingIntent(R.id.clock_edit_button, launchPendingIntent);
+        widget.setOnClickPendingIntent(R.id.clock_edit_buttona, launchPendingIntent);
     }
 
 

@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="community.fairphone.clock">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools">
 
     <uses-permission android:name="android.permission.DISABLE_KEYGUARD"/>
     <uses-permission android:name="com.android.alarm.permission.SET_ALARM"/>
@@ -8,12 +7,12 @@
     <application
         android:icon="@mipmap/ic_clock_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Material3.Dark" >
+        android:theme="@style/Theme.Material3.DynamicColors.Dark">
         <activity
             android:name=".CentralActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
-            android:theme="@style/Theme.Material3.Dark"
-            android:exported="true">
+            android:exported="true"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
             </intent-filter>
@@ -37,11 +36,9 @@
         <service
             android:name=".ClockScreenService"
             android:enabled="true"
-            android:exported="true" >
+            android:exported="false"
+            android:permission="TODO">
         </service>
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

@@ -1,5 +1,6 @@
 package community.fairphone.clock;
 
+import android.annotation.SuppressLint;
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -76,11 +77,11 @@ public class ClockScreenService extends Service {
         }
     }
 
+
     @Override
 	public void onDestroy() {
         Log.d(TAG, "onDestroy");
 		super.onDestroy();
-
         clearAMPMManager();
         clearAMPMReceiver();
         clearAlarmChangeReceiver();
@@ -153,12 +154,7 @@ public class ClockScreenService extends Service {
                     updateWidget();
                 }
             };
-            if (Build.VERSION.SDK_INT < Build.VERSION_CODES.JELLY_BEAN_MR2) {
-                registerReceiver(mAlarmChangedReceiver, new IntentFilter(ACTION_ALARM_CHANGED_V18));
-            }else
-            {
-                registerReceiver(mAlarmChangedReceiver, new IntentFilter(ACTION_ALARM_CHANGED));
-            }
+            registerReceiver(mAlarmChangedReceiver, new IntentFilter(ACTION_ALARM_CHANGED));
         }
     }
 
