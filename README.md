@@ -1,2 +1,4 @@
-# FP2ClockMaterialU
-An prototype of redesigned and ported clock widget from Fairphone 2 to modern fairphone models featuring materialyou.
+# Monet Fairphone Clock
+Fairphone 2 clock widget but MaterialYou
+
+
