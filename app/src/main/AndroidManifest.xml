@@ -7,7 +7,7 @@
     <application
         android:icon="@mipmap/ic_clock_launcher"
         android:label="@string/app_name"
-        android:theme="@style/Theme.Material3.DynamicColors.Dark">
+        android:theme="@style/Theme.Material3.DynamicColors.DayNight">
         <activity
             android:name=".CentralActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

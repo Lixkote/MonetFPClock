@@ -7,6 +7,11 @@
 
     -->
 
+    <style name="AppTheme" parent="@style/Theme.Material3.DynamicColors.DayNight">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+    </style>
+
     <style name="big_bold">
         <item name="android:textSize">@dimen/big_font_size</item>
         <item name="android:textStyle">bold</item>

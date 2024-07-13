@@ -135,8 +135,8 @@
         android:layout_alignParentEnd="true"
         android:layout_marginTop="20dp"
         android:background="@drawable/rounded_corner"
-        android:backgroundTint="@android:color/system_accent2_800"
-        android:drawableLeft="@drawable/baseline_edit_24"
+        android:backgroundTint="@color/colorPrimary"
+        android:drawableLeft="@drawable/editicon"
         android:ellipsize="end"
         android:fontFamily="sans-serif"
         android:paddingStart="8dp"
@@ -145,6 +145,6 @@
         android:paddingBottom="4dp"
         android:text="@string/edit"
         android:textAllCaps="false"
-        android:textColor="@android:color/system_accent1_100"
+        android:textColor="@color/colortextPrimary"
         android:textSize="18sp" />
 </RelativeLayout>
